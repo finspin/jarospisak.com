@@ -1,0 +1,16 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal website of Jaro Spisak">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/syntax-highlighter.css">
+    <title>
+        {% if page.url == "/" %}
+            {{ site.title }}
+        {% else %}
+            {{ page.title }} | {{ site.title }}
+        {% endif %}
+    </title>
+</head>

@@ -1,0 +1,8 @@
+<div class="post-meta">
+    <div class="post-categories">
+        <strong>Categories:</strong>
+        {% for category in page.categories %}
+        <a href="{{ site.baseurl }}/categories/#{{ category|slugize }}">{{ category }}</a>{% unless forloop.last %},&nbsp;{% endunless %}
+        {% endfor %}
+    </div>
+</div>

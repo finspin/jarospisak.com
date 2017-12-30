@@ -1,0 +1,8 @@
+title: Jaro Spisak - personal website
+highlighter: rouge
+markdown: kramdown
+kramdown:
+    input: GFM #Github Flavored Markdown
+    hard_wrap: false
+    syntax_highlighter: rouge
+
