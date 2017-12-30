@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+- 2.3.3
+
+install:
+  - gem install jekyll
+
+script:
+  - jekyll build
+  - sh 'aws s3 sync ./_site "s3://jarospisak.com" --acl public-read'
