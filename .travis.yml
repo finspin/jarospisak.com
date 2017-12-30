@@ -12,9 +12,10 @@ deploy:
   on:
     branch: master
   provider: s3
+  bucket: jarospisak.com
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   region: us-west-2
-  bucket: jarospisak.com
+  acl: public_read
   skip_cleanup: true
   local_dir: ./_site
