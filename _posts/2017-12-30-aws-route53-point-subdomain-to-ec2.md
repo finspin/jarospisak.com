@@ -1,7 +1,7 @@
 ---
 title: How to point subdomain to EC2 instance in Route 53 
 layout: post
-permalink: /aws-route53-point-subdomain-to-ec2
+permalink: /aws-route53-point-subdomain-to-ec2/
 categories: aws
 ---
 

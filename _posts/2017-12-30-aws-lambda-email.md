@@ -1,7 +1,7 @@
 ---
 title: How to set up AWS Lambda with automated email
 layout: post
-permalink: /aws-lambda-email
+permalink: /aws-lambda-email/
 categories: aws lambda
 ---
 
