@@ -9,6 +9,14 @@ body {
     text-rendering: geometricPrecision;
 }
 
+p.small-gap {
+    margin-bottom: 0.5rem;
+}
+
+strong {
+    font-weight: bold;
+}
+
 .header {
     margin: 0 0 2.5rem;
     padding: 2rem 0 1rem;
@@ -22,7 +30,7 @@ h1, h2, h3, h4 {
 }
 
 .header h1 {
-    font-size: 3.4rem;
+    font-size: 2.5rem;
     font-weight: 600;
 }
 
@@ -34,6 +42,13 @@ h2 {
 
 h3 {
     font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+    margin-bottom: 0.7rem;
+}
+
+h4 {
+    font-size: 1.3rem;
     font-weight: 600;
     margin-top: 1.5rem;
     margin-bottom: 0.7rem;

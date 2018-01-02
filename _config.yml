@@ -6,3 +6,4 @@ kramdown:
     hard_wrap: false
     syntax_highlighter: rouge
 
+gems: [jekyll-mermaid]
