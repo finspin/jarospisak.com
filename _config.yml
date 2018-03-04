@@ -5,5 +5,3 @@ kramdown:
     input: GFM #Github Flavored Markdown
     hard_wrap: false
     syntax_highlighter: rouge
-
-gems: [jekyll-mermaid]
