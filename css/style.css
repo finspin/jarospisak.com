@@ -66,6 +66,12 @@ li ul {
     margin-top: 0.5rem;
 }
 
+img.screenshot {
+    -webkit-box-shadow: 2px 2px 8px 4px #ababab;
+    -moz-box-shadow: 2px 2px 8px 4px #ababab;
+    box-shadow: 2px 2px 8px 4px #ababab;
+}
+
 .navbar-nav {
     font-family: Roboto, Helvetica, Arial sans-serif;
 }
