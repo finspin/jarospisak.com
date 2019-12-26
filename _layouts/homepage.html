@@ -1,38 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-{% include head.html %}
-<body id="homepage">
-<div class="container">
-    <div class="row">
+  {% include head.html %}
+  <body id="homepage">
+    <div class="container">
+      <div class="row">
         <div class="col-xs-12 col-md-8 offset-md-2">
-            <div class="header">
-                <h1>{{ page.title }}</h1>
-                <div class="subtitle"><em>{{ page.subtitle }}</em></div>
-                <div class="other-profiles">
-                    <a href="http://github.com/finspin">Github</a> |
-                    <a href="http://stackoverflow.com/users/932210/finspin">StackOverflow</a> |
-                    <a href="https://www.linkedin.com/in/jaroin/">LinkedIn</a> |
-                    <a href="https://www.facebook.com/jaro.spisak">Facebook</a>
-
-                </div>
+          <div class="header">
+            <h1>{{ page.title }}</h1>
+            <div class="subtitle"><em>{{ page.subtitle }}</em></div>
+            <div class="other-profiles">
+              <a href="https://www.gotodevops.org/">GoTo DevOps</a> | <a href="http://github.com/finspin">Github</a> |
+              <a href="http://stackoverflow.com/users/932210/finspin">StackOverflow</a> |
+              <a href="https://www.linkedin.com/in/jaroin/">LinkedIn</a> |
+              <a href="https://www.facebook.com/jaro.spisak">Facebook</a>
             </div>
+          </div>
 
-            <div class="content">
+          <div class="content">
+            <h2>List of posts</h2>
+            <ul>
+              {% for post in site.posts %}
+              <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+              </li>
+              {% endfor %}
+            </ul>
 
-                <h2>List of posts</h2>
-                <ul>
-                    {% for post in site.posts %}
-                    <li>
-                        <a href="{{ post.url }}">{{ post.title }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-
-                {{content}}
-            </div>
+            {{content}}
+          </div>
         </div>
+      </div>
     </div>
-</div>
-</body>
-{% include footer.html %}
+  </body>
+  {% include footer.html %}
 </html>
