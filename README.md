@@ -1,1 +1,1 @@
-[![Build Status](https://travis-ci.org/finspin/jarospisak.com.svg?branch=master)](https://travis-ci.org/finspin/jarospisak.com)
+![](https://github.com/finspin/jarospisak.com/workflows/Build%20and%20deploy/badge.svg)
