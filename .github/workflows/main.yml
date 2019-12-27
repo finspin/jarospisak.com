@@ -20,7 +20,7 @@ jobs:
         with:
           ruby-version: '2.x'
 
-      - name: Install Jekyll and awscli
+      - name: Install Jekyll
         run: gem install jekyll
 
       - name: Build
@@ -36,4 +36,4 @@ jobs:
         run: |
           aws configure set preview.cloudfront true
           aws cloudfront create-invalidation --distribution-id ${{ secrets.WWW_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
-          aws cloudfront create-invalidation --distribution-id ${{ secrets.NON_WWW_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.NON_WWW_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
