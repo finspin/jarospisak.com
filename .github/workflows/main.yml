@@ -1,8 +1,5 @@
 name: Build and deploy
 
-jobs:
-  build:
-
 on:
   push:
     branches:
@@ -10,6 +7,7 @@ on:
 
 jobs:
   build-and-deploy:
+    name: Build and deploy
     runs-on: [ubuntu-18.04]
 
     steps:
