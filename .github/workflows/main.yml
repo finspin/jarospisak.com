@@ -1,0 +1,41 @@
+name: Build and deploy
+
+jobs:
+  build:
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: [ubuntu-18.04]
+
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-ruby@v1
+      with:
+        ruby-version: '2.x'
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_REGION: 'us-west-2'
+
+    - name: Install Jekyll and awscli
+      run: gem install jekyll
+
+    - name: Build
+      run: jekyll build
+
+    - name: Install AWS CLI
+      run: pip install --user awscli
+
+    - name: Deploy site to AWS S3
+      run: aws s3 sync ./_site  s3://www.jarospisak.com --delete --acl public-read
+    
+    - name: Invalidate CloudFront cache
+      run: |
+        aws configure set preview.cloudfront true
+        aws cloudfront create-invalidation --distribution-id ${{ secrets.WWW_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
+        aws cloudfront create-invalidation --distribution-id ${{ secrets.NON_WWW_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*
